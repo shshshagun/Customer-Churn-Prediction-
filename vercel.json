@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "src/stayline/app/api.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "src/stayline/app/api.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "src/stayline/app/api.py"
+    }
+  ]
+}
