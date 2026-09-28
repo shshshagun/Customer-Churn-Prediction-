@@ -2,7 +2,15 @@
   "builds": [
     {
       "src": "src/stayline/app/api.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "includeFiles": [
+          "data/warehouse/stayline.db",
+          "config/settings.yaml",
+          "config/assumptions.yaml",
+          "app/index.html"
+        ]
+      }
     }
   ],
   "routes": [
