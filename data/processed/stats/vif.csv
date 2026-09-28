@@ -1,0 +1,16 @@
+feature,vif
+tenure_months,3.32
+monthly_charge,67.83
+services_count,26.37
+is_senior,1.13
+has_partner,1.34
+has_dependents,1.24
+is_autopay,1.21
+is_new_subscriber,1.71
+fibre_without_support,2.36
+has_protection_bundle,3.37
+contract_one_year,1.61
+contract_two_year,2.53
+internet_fibre,46.11
+internet_dsl,9.35
+paperless_billing,1.19

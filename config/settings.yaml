@@ -1,0 +1,57 @@
+# Stayline Retention Intelligence — Project Settings
+# All paths are relative to the project root.
+
+project:
+  name: "Stayline"
+  product: "Stayline Retention Intelligence"
+  version: "1.0.0"
+
+data:
+  raw_csv: "data/raw/telco_subscribers.csv"
+  validation_report: "data/interim/validation_report.json"
+  cleaning_log: "data/interim/cleaning_log.csv"
+  processed_dir: "data/processed"
+  stats_dir: "data/processed/stats"
+  insights_json: "data/processed/insights.json"
+  feature_importance_csv: "data/processed/feature_importance.csv"
+  warehouse_db: "data/warehouse/stayline.db"
+
+modeling:
+  random_seed: 42
+  test_size: 0.20
+  cv_folds: 5
+  # Imbalance handling: "balanced" for sklearn, scale_pos_weight for xgboost
+  imbalance_strategy: "balanced"
+  # Risk band thresholds are computed dynamically by thresholds.py and stored here at runtime
+  risk_band_high_threshold: null   # set by thresholds.py
+  risk_band_medium_threshold: null # set by thresholds.py
+  # Fallback thresholds (used if optimizer has not run yet)
+  fallback_high_threshold: 0.55
+  fallback_medium_threshold: 0.35
+  # Keras training
+  keras_max_epochs: 150
+  keras_patience: 15
+  keras_batch_size: 256
+  keras_learning_rate: 0.001
+  keras_l2: 0.001
+  keras_val_split: 0.15   # fraction of train carved out for Keras val set
+  # RandomizedSearchCV budget
+  search_n_iter: 30
+
+models_dir: "models"
+
+reports:
+  excel_path: "reports/excel/stayline_retention_workbook.xlsx"
+  briefs_dir: "reports/briefs"
+  powerbi_data_dir: "powerbi/data"
+
+logs:
+  pipeline_log: "logs/pipeline.log"
+
+sql:
+  schema: "sql/schema.sql"
+  views: "sql/views.sql"
+  analysis_dir: "sql/analysis"
+
+# Subscribers in the watchlist export (top-N highest risk)
+watchlist_top_n: 500

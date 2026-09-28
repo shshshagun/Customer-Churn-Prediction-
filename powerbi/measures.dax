@@ -1,0 +1,1 @@
+Total Subscribers = COUNTROWS(dim_subscriber)

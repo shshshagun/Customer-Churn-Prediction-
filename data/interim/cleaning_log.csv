@@ -1,0 +1,11 @@
+rule,rows_affected,rationale
+Total Charges blank → 0.0 for Tenure=0,11,Subscribers with tenure=0 have not yet been billed.
+Online Security: 'No internet service' → 'No',1526,Simplifies encoding.
+Online Backup: 'No internet service' → 'No',1526,Simplifies encoding.
+Device Protection: 'No internet service' → 'No',1526,Simplifies encoding.
+Tech Support: 'No internet service' → 'No',1526,Simplifies encoding.
+Streaming TV: 'No internet service' → 'No',1526,Simplifies encoding.
+Streaming Movies: 'No internet service' → 'No',1526,Simplifies encoding.
+Multiple Lines: 'No phone service' → 'No',682,Redundant.
+Rename all columns to snake_case and drop leakage columns,0,Consistent naming.
+churned_flag: 'Yes'/'No' → 1/0,7043,Binary target.

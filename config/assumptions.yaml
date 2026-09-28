@@ -1,0 +1,44 @@
+# Stayline Retention Intelligence — Business Assumptions
+# =========================================================
+# ALL values in this file are ASSUMPTIONS used for illustrative ROI modelling.
+# They are NOT real business data. Label them as ASSUMPTIONS in every UI.
+# Document the formula in docs/methodology.md.
+
+retention_offer:
+  # Cost per outreach contact (call + agent time + offer discount), in currency units.
+  offer_cost_per_subscriber: 50.0
+
+  # Probability that a contacted high-risk subscriber actually stays (i.e. is saved).
+  # Range [0, 1]. Conservative estimate.
+  assumed_save_rate: 0.20
+
+  # How many months of monthly charge to count as "saved" revenue when a
+  # subscriber is retained.
+  value_horizon_months: 12
+
+# Revenue-at-risk formula (used in SQL and Python):
+#   revenue_at_risk_i = monthly_charge_i * calibrated_risk_score_i
+# Summed across all subscribers in High and Medium bands.
+
+# Expected net value formula for a given threshold t:
+#   contacts(t)        = count(subscribers where risk_score >= t)
+#   expected_saves(t)  = contacts(t) * assumed_save_rate
+#   gross_revenue(t)   = expected_saves(t) * avg_monthly_charge * value_horizon_months
+#   cost(t)            = contacts(t) * offer_cost_per_subscriber
+#   expected_net_value = gross_revenue(t) - cost(t)
+# The optimal threshold maximises expected_net_value.
+
+# Slider defaults for the Retention Planner page (these are also the
+# default assumption values above — kept in sync):
+planner_defaults:
+  offer_cost_min: 10
+  offer_cost_max: 200
+  offer_cost_step: 5
+
+  save_rate_min: 0.05
+  save_rate_max: 0.60
+  save_rate_step: 0.01
+
+  value_horizon_min: 3
+  value_horizon_max: 36
+  value_horizon_step: 1

@@ -1,0 +1,117 @@
+{
+  "generated_at": "2026-09-28T16:00:02.995485Z",
+  "row_count": 7043,
+  "column_count": 33,
+  "findings": [
+    {
+      "check": "Required columns present (missing: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "CustomerID uniqueness (duplicates: 0)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Gender' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Senior Citizen' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Partner' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Dependents' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Phone Service' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Multiple Lines' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Internet Service' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Online Security' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Online Backup' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Device Protection' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Tech Support' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Streaming TV' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Streaming Movies' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Contract' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Paperless Billing' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Payment Method' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Allowed values for 'Churn Label' (unexpected: none)",
+      "status": "PASS"
+    },
+    {
+      "check": "Tenure Months >= 0 (violations: 0)",
+      "status": "PASS"
+    },
+    {
+      "check": "Monthly Charges > 0 (violations: 0)",
+      "status": "PASS"
+    },
+    {
+      "check": "Tenure Months max reasonable (<= 200 months)",
+      "status": "PASS"
+    },
+    {
+      "check": "Total Charges blanks (11) match Tenure=0 rows (11)",
+      "status": "PASS"
+    },
+    {
+      "check": "Missingness report",
+      "status": "INFO",
+      "details": {
+        "Churn Reason": 5174
+      }
+    },
+    {
+      "check": "Target distribution",
+      "status": "INFO",
+      "details": {
+        "counts": {
+          "No": 5174,
+          "Yes": 1869
+        },
+        "churn_rate": 0.2654
+      }
+    }
+  ]
+}

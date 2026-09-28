@@ -1,0 +1,24 @@
+{
+  "revenue_at_risk": 0.0,
+  "contract_insights": [
+    {
+      "contract_type": "Month-to-month",
+      "total": 3875,
+      "churned": 1655,
+      "churn_rate": 0.4271
+    },
+    {
+      "contract_type": "One year",
+      "total": 1473,
+      "churned": 166,
+      "churn_rate": 0.1127
+    },
+    {
+      "contract_type": "Two year",
+      "total": 1695,
+      "churned": 48,
+      "churn_rate": 0.0283
+    }
+  ],
+  "top_recommendation": "Target month-to-month subscribers in their first 6 months with discounted 1-year contract upgrades."
+}

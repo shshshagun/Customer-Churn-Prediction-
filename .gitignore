@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files (large)
+data/warehouse/*.db
+data/raw/*.csv
+
+# Model artifacts (tracked via DVC or documented separately)
+models/*.joblib
+models/*.keras
+models/*.pkl
+
+# Logs
+logs/
+*.log
+
+# Reports (generated)
+reports/excel/
+reports/briefs/
+
+# Power BI
+powerbi/data/
+
+# Environment
+.env
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp

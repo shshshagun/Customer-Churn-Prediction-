@@ -1,0 +1,4 @@
+contract_type,n_subscribers,n_events,median_survival_months,plain_english,logrank_p_global,logrank_significant
+Month-to-month,3875,1655,35.0,Month-to-month subscribers: 42.7% attrition rate. Median retention: 35 months. Global log-rank test: p = 0.0000 (significant difference across groups).,0.0,True
+One year,1473,166,,One year subscribers: 11.3% attrition rate. Median retention: not reached (>50% still active). Global log-rank test: p = 0.0000 (significant difference across groups).,0.0,True
+Two year,1695,48,,Two year subscribers: 2.8% attrition rate. Median retention: not reached (>50% still active). Global log-rank test: p = 0.0000 (significant difference across groups).,0.0,True
