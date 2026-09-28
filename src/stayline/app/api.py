@@ -8,7 +8,11 @@ for real data from the SQLite warehouse.
 from __future__ import annotations
 
 import math
+import sys
 from pathlib import Path
+
+# Fix for Vercel Serverless (adding src to PYTHONPATH)
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware

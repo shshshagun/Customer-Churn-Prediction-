@@ -28,13 +28,10 @@ import yaml
 # ---------------------------------------------------------------------------
 
 def _find_project_root() -> Path:
-    """Walk up from this file's location until we find pyproject.toml."""
-    candidate = Path(__file__).resolve()
-    for parent in [candidate, *candidate.parents]:
-        if (parent / "pyproject.toml").exists():
-            return parent
-    # Fallback: cwd
-    return Path.cwd()
+    """Resolve project root based on the file path (works reliably on Vercel)."""
+    # config.py is at src/stayline/config.py
+    # So parent.parent.parent is the root
+    return Path(__file__).resolve().parent.parent.parent
 
 
 PROJECT_ROOT: Path = _find_project_root()
